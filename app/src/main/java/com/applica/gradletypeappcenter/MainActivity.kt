@@ -15,6 +15,13 @@ import com.applica.gradletypeappcenter.ui.theme.GradleTypeAppCenterTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        AppCenter.start(
+            application, "1fb1a3a2-86b3-450f-8755-5ce554264560",
+            Analytics::class.java,
+            Crashes::class.java
+        )
+
         setContent {
             GradleTypeAppCenterTheme {
                 // A surface container using the 'background' color from the theme
