@@ -13,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GradleTypeAppCenter"
-include(":app")
- 
+rootProject.name = "Graddleapptest"
+include ':app'
