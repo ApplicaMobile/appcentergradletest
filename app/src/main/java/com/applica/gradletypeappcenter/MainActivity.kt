@@ -11,10 +11,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.applica.gradletypeappcenter.ui.theme.GradleTypeAppCenterTheme
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        AppCenter.start(
+            application, "1fb1a3a2-86b3-450f-8755-5ce554264560",
+            Analytics::class.java,
+            Crashes::class.java
+        )
+
         setContent {
             GradleTypeAppCenterTheme {
                 // A surface container using the 'background' color from the theme

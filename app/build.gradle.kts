@@ -50,6 +50,10 @@ android {
 }
 
 dependencies {
+    val appCenterSdkVersion = "5.0.2"
+
+    implementation("com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}")
+    implementation("com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
