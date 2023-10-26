@@ -26,6 +26,27 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions 'env', 'uiTech'
+    productFlavors {
+        prod {
+            dimension 'env'
+        }
+
+        stage {
+            dimension 'env'
+            applicationIdSuffix '.stage'
+        }
+
+        view {
+            dimension 'uiTech'
+        }
+
+        compose {
+            dimension 'uiTech'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
